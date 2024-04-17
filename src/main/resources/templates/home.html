@@ -1,0 +1,18 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <section class="banner d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <h1>This is home page</h1>
+            <p>Start Collection Your Contect In Vary Smarter Way. We Provied Very Efficient And Smarter Way Of Handelling Contact</p>
+            <a th:href="@{/signup}" class="btn bg-primary btn-lg text-white">Sign Up</a>
+        </div>
+    </section>
+</body>
+</html>

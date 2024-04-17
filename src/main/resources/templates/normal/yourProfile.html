@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <h1>Profile Page</h1>
+        <div class="card ms-3 me-3" >
+
+            <div class="card-body" th:if="${user}">
+
+                <div class="container text-center">
+
+                    <img  srg="" style="width: 250px; height: 250px;" class="mu_profile_picture" th:src="@{/image/contact.png}" alt="">
+                    <h1 class="mt-3"> <span th:text="${user.name}"> </h1>
+
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <td th:text="${user.id}"></td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">Email</th>
+                            <td th:text="${user.email}"></td>
+                            
+                          </tr>
+                         
+                          <tr>
+                            <th scope="row">Role</th>
+                            <td th:text="${user.role}"></td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">About</th>
+                            <td th:text="${user.about}"></td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <!-- <div class="description">
+                            <th:block th:utext="${contact.description}"></th:block>
+                      </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
